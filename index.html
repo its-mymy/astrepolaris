@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Astre Polaris — O universo de ideias.">
+    <meta name="description" content="Astre Polaris — seu espaço na internet, do seu jeito.">
     <title>Astre Polaris — O universo de ideias</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="menu/menu.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <div id="menu"></div>
 
     <canvas id="stars"></canvas>
 
@@ -21,26 +24,17 @@
 
         <a href="#" class="brand">
             <span class="brand-symbol">✦</span>
+
             <span class="brand-name">
                 ASTRE <strong>POLARIS</strong>
             </span>
         </a>
 
-        <nav class="nav-links">
-            <a href="#" class="active">⌂ <span>Início</span></a>
-            <a href="#sobre">◌ <span>Sobre</span></a>
-            <a href="#servicos">◇ <span>Serviços</span></a>
-            <a href="#portfolio">▣ <span>Portfólio</span></a>
-            <a href="#contato">✉ <span>Contato</span></a>
-        </nav>
-
-        <a href="#contato" class="connect-button">
-            Criar meu espaço
-        </a>
-
     </header>
 
     <main>
+
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -50,20 +44,12 @@
             <div class="orbit orbit-one"></div>
             <div class="orbit orbit-two"></div>
 
-            <div class="planet planet-one"></div>
-            <div class="planet planet-two"></div>
-            <div class="planet planet-three"></div>
+            <img src="assets/lua.png" alt="" class="planet planet-one">
+            <img src="assets/planeta.png" alt="" class="planet planet-two">
+            <img src="assets/planeta2.png" alt="" class="planet planet-three">
 
             <div class="black-hole-wrap">
-
                 <div class="black-hole-glow"></div>
-
-                <img
-                    src="buraco-negro.jpg"
-                    alt="Buraco negro"
-                    class="black-hole"
-                >
-
             </div>
 
             <div class="hero-content">
@@ -74,35 +60,35 @@
 
                 <h1>
                     O universo
-                    <span>de ideias.</span>
+                    <span>de ideias</span>
                 </h1>
 
                 <div class="role">
                     <span class="role-dot"></span>
-                    EXPERIÊNCIAS DIGITAIS
+                    ESPAÇOS DIGITAIS PERSONALIZADOS
                     <span class="role-dot"></span>
                 </div>
 
                 <p>
-                    Transformamos ideias em experiências digitais
-                    únicas, criativas e feitas para você.
+                    Criamos páginas para comunidades, projetos e pessoas
+                    com modelos prontos, conteúdo personalizado e identidade própria.
                 </p>
 
                 <div class="tags">
                     <span>✦ PERSONALIZADO</span>
-                    <span>◌ CRIATIVO</span>
-                    <span>◇ DIGITAL</span>
+                    <span>◌ SEU CONTEÚDO</span>
+                    <span>◇ SEU ESPAÇO</span>
                 </div>
 
                 <div class="hero-buttons">
 
-                    <a href="#portfolio" class="main-button">
-                        Explorar projetos
+                    <a href="#modelos" class="main-button">
+                        Conhecer os modelos
                         <span>↗</span>
                     </a>
 
-                    <a href="#sobre" class="outline-button">
-                        Conhecer o Astre
+                    <a href="#como-funciona" class="outline-button">
+                        Como funciona
                     </a>
 
                 </div>
@@ -121,55 +107,76 @@
 
         </section>
 
+        <!-- SOBRE -->
+
         <section class="section" id="sobre">
 
             <span class="section-label">01 / ASTRE POLARIS</span>
 
             <h2>
-                Ideias não precisam
-                <span>caber em caixas.</span>
+                Seu espaço na internet,
+                <span>do seu jeito :D </span>
             </h2>
 
             <p>
-                Criamos espaços digitais que transformam conceitos,
-                projetos e histórias em experiências únicas.
+                O Astre Polaris cria páginas digitais a partir de modelos
+                básicos que podem ser adaptados ao conteúdo, tema e identidade
+                do seu projeto.
+            </p>
+
+            <p>
+                Você escolhe a estrutura. Nós personalizamos o espaço para
+                combinar com a sua comunidade, projeto ou ideia.
             </p>
 
         </section>
 
-        <section class="services" id="servicos">
+        <!-- MODELOS -->
 
-            <span class="section-label">02 / O QUE CRIAMOS</span>
+        <section class="services" id="modelos">
+
+            <span class="section-label">02 / MODELOS</span>
+
+            <h2>
+                Escolha uma base e
+                <span>crie seu universo</span>
+            </h2>
 
             <div class="service-grid">
 
                 <article>
                     <small>01</small>
                     <strong>✦</strong>
-                    <h3>Páginas pessoais</h3>
+
+                    <h3>Comunidade</h3>
+
                     <p>
-                        Seu próprio espaço na internet,
-                        construído com sua identidade.
+                        Um espaço para apresentar sua comunidade,
+                        regras, anúncios, temas, informações e links.
                     </p>
                 </article>
 
                 <article>
                     <small>02</small>
                     <strong>◌</strong>
-                    <h3>Projetos & comunidades</h3>
+
+                    <h3>Projeto pessoal</h3>
+
                     <p>
-                        Sites para projetos, comunidades
-                        e ideias que precisam de um universo próprio.
+                        Uma página para apresentar você, seus projetos,
+                        redes sociais, trabalhos e conteúdos.
                     </p>
                 </article>
 
                 <article>
                     <small>03</small>
                     <strong>◇</strong>
-                    <h3>Experiências especiais</h3>
+
+                    <h3>Espaço especial</h3>
+
                     <p>
-                        Páginas interativas para momentos
-                        que merecem algo diferente.
+                        Uma página diferente para homenagens, eventos,
+                        páginas temáticas, cards e experiências especiais.
                     </p>
                 </article>
 
@@ -177,17 +184,140 @@
 
         </section>
 
-        <section class="cta" id="contato">
+        <!-- COMO FUNCIONA -->
 
-            <span class="section-label">03 / SEU UNIVERSO</span>
+        <section class="section process-section" id="como-funciona">
+
+            <span class="section-label">03 / COMO FUNCIONA</span>
 
             <h2>
-                Vamos criar
-                <span>algo único.</span>
+                Você traz a ideia.
+                <span>Nós criamos o espaço.</span>
+            </h2>
+
+            <div class="process-grid">
+
+                <div class="process-item">
+                    <span>01</span>
+                    <h3>Escolha um modelo</h3>
+                    <p>
+                        Comece com uma das estruturas disponíveis.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>02</span>
+                    <h3>Envie seu conteúdo</h3>
+                    <p>
+                        Nome, textos, imagens, links, redes sociais,
+                        tema e tudo que fará parte da página.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>03</span>
+                    <h3>Personalizamos</h3>
+                    <p>
+                        Adaptamos o modelo à identidade e ao objetivo
+                        do seu espaço.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>04</span>
+                    <h3>Publicamos</h3>
+                    <p>
+                        Depois de pronto, seu espaço fica disponível na internet.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- O QUE PODE TER -->
+
+        <section class="services features-section">
+
+            <span class="section-label">04 / PERSONALIZAÇÃO</span>
+
+            <h2>
+                O espaço é seu.
+                <span>O conteúdo também.</span>
+            </h2>
+
+            <div class="service-grid">
+
+                <article>
+                    <small>01</small>
+                    <strong>✦</strong>
+                    <h3>Temas e identidade</h3>
+                    <p>
+                        Cores, imagens, elementos visuais e estilo
+                        adaptados ao seu projeto.
+                    </p>
+                </article>
+
+                <article>
+                    <small>02</small>
+                    <strong>◌</strong>
+                    <h3>Links e redes sociais</h3>
+                    <p>
+                        Organize suas redes, comunidades,
+                        contatos e outros links importantes.
+                    </p>
+                </article>
+
+                <article>
+                    <small>03</small>
+                    <strong>◇</strong>
+                    <h3>Cards e conteúdos</h3>
+                    <p>
+                        Adicione cards, informações, anúncios,
+                        imagens e conteúdos especiais.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- DESENVOLVIMENTO -->
+
+        <section class="section development-section">
+
+            <span class="section-label">05 / EM DESENVOLVIMENTO</span>
+
+            <h2>
+                O universo ainda está
+                <span>se expandindo.</span>
+            </h2>
+
+            <p>
+                O Astre Polaris está em desenvolvimento. Novas formas de
+                personalização e recursos serão adicionados com o tempo.
+            </p>
+
+            <p>
+                Recursos como contas, login e sistemas personalizados
+                poderão fazer parte de futuras versões.
+            </p>
+
+        </section>
+
+        <!-- CTA -->
+
+        <section class="cta" id="contato">
+
+            <span class="section-label">06 / SEU UNIVERSO</span>
+
+            <h2>
+                Tem uma ideia?
+                <span>Vamos criar.</span>
             </h2>
 
             <a href="mailto:contato@astrepolaris.com" class="main-button">
-                Começar um projeto
+                Criar meu espaço
                 <span>↗</span>
             </a>
 
@@ -199,7 +329,9 @@
 
         <div class="brand">
             <span class="brand-symbol">✦</span>
-            <span class="brand-name">ASTRE <strong>POLARIS</strong></span>
+            <span class="brand-name">
+                ASTRE <strong>POLARIS</strong>
+            </span>
         </div>
 
         <span>O universo de ideias.</span>
@@ -209,6 +341,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="menu/menu.js"></script>
 
 </body>
 </html>

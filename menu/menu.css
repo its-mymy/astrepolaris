@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: transparent;
+    font-family: "Inter", sans-serif;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 100;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(210, 235, 255, 0.28);
+    border-radius: 18px;
+    background: rgba(190, 220, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        inset 0 -10px 25px rgba(80, 130, 255, 0.05),
+        0 8px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        background .35s ease;
+}
+
+.menu-button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.11),
+        transparent 40%,
+        rgba(95, 190, 255, 0.07)
+    );
+    pointer-events: none;
+}
+
+.menu-button span {
+    position: relative;
+    z-index: 1;
+    width: 21px;
+    height: 1.5px;
+    border-radius: 10px;
+    background: rgba(235, 247, 255, 0.95);
+    box-shadow: 0 0 8px rgba(135, 220, 255, 0.35);
+    transition: transform .35s ease, opacity .3s ease;
+}
+
+.menu-button:hover {
+    background: rgba(190, 220, 255, 0.14);
+    transform: translateY(-2px);
+}
+
+.menu-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    padding: 100px 25px 25px;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(4, 5, 12, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+}
+
+.menu-panel.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu-inner {
+    width: min(390px, 100%);
+    min-height: calc(100vh - 125px);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(205, 230, 255, 0.18);
+    border-radius: 28px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(180, 215, 255, 0.11),
+            rgba(80, 100, 180, 0.06)
+        );
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.08),
+        inset 0 -30px 60px rgba(70, 120, 255, 0.035),
+        0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-label {
+    color: rgba(210, 228, 255, 0.7);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(200, 225, 255, 0.16);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.close-button:hover {
+    background: rgba(100, 190, 255, 0.12);
+    transform: rotate(90deg);
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-links a {
+    position: relative;
+    padding: 18px 15px;
+    border-radius: 14px;
+    color: rgba(240, 245, 255, 0.84);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    transition:
+        color .3s ease,
+        background .3s ease,
+        padding-left .3s ease;
+}
+
+.menu-links a::after {
+    content: "↗";
+    position: absolute;
+    right: 18px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: .3s ease;
+    color: #8ddcff;
+}
+
+.menu-links a:hover {
+    padding-left: 22px;
+    color: white;
+    background: rgba(145, 195, 255, 0.07);
+}
+
+.menu-links a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-bottom {
+    padding-top: 25px;
+    border-top: 1px solid rgba(190, 215, 255, 0.1);
+    color: rgba(170, 180, 200, 0.55);
+    font-size: 11px;
+}
+
+.menu-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+}
+
+@media (max-width: 600px) {
+
+    .menu-button {
+        top: 15px;
+        right: 15px;
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+    }
+
+    .menu-panel {
+        padding: 80px 15px 15px;
+    }
+
+    .menu-inner {
+        min-height: calc(100vh - 95px);
+        padding: 24px 20px;
+        border-radius: 24px;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+}
