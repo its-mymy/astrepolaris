@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 01 | Astre Polaris</title>
+    <meta name="description" content="Crie seu próprio card celestial com a Astre Polaris.">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../assets/favicon.png">
+</head>
+<body>
+    <!-- ESTRELAS DO FUNDO -->
+    <div class="stars-background"></div>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="../../index.html" class="back-button">
+            <span>←</span> Voltar ao Astre Polaris
+        </a>
+
+        <div class="header-title">
+            <span class="header-decoration">✦</span>
+            <h1>Astre Polaris</h1>
+            <p>Seu pequeno universo em um card.</p>
+        </div>
+
+        <div class="header-version">
+            CARD 01
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-container">
+
+        <section class="intro">
+
+            <span class="intro-label">✧ ASTRE POLARIS CREATIONS ✧</span>
+
+            <h2>Crie seu universo.</h2>
+
+            <p>
+                Escolha suas fotografias, personalize as molduras,
+                adicione detalhes e transforme suas ideias em um card.
+            </p>
+
+        </section>
+
+
+        <!-- EDITOR -->
+        <section class="editor-container">
+
+
+            <!-- ÁREA DE VISUALIZAÇÃO -->
+            <div class="preview-section">
+
+                <div class="preview-heading">
+                    <span>✦</span>
+                    <h3>Seu card</h3>
+                    <span>✦</span>
+                </div>
+
+
+                <!-- CARD QUE SERÁ EXPORTADO -->
+                <div id="cardCanvas" class="card-canvas">
+
+                    <div class="card-inner">
+
+                        <!-- APELIDO -->
+                        <div id="nicknameArea" class="nickname-area">
+                            <span id="nicknameText"></span>
+                        </div>
+
+
+                        <!-- DECORAÇÕES -->
+                        <div id="decorationLayer" class="decoration-layer">
+
+                            <span class="card-star star-one">✦</span>
+                            <span class="card-star star-two">✧</span>
+                            <span class="card-star star-three">⋆</span>
+                            <span class="card-star star-four">✦</span>
+
+                        </div>
+
+
+                        <!-- FOTOGRAFIAS -->
+                        <div class="photo-grid">
+
+                            <div class="photo-slot slot-1" data-slot="1">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-2" data-slot="2">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-3" data-slot="3">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-4" data-slot="4">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-5" data-slot="5">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-6" data-slot="6">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-7" data-slot="7">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-8" data-slot="8">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                            <div class="photo-slot slot-9" data-slot="9">
+                                <div class="empty-photo">
+                                    <span>✧</span>
+                                    <p>Adicionar foto</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- ASSINATURA -->
+                        <footer class="card-signature">
+                            astre polaris
+                        </footer>
+
+                    </div>
+
+                </div>
+
+
+                <p class="preview-caption">
+                    ✧ Pré-visualização do seu universo ✧
+                </p>
+
+            </div>
+
+
+
+            <!-- PAINEL DE PERSONALIZAÇÃO -->
+            <aside class="editor-panel">
+
+                <div class="panel-header">
+                    <h3>Personalize seu card</h3>
+                    <p>Deixe cada detalhe com a sua identidade.</p>
+                </div>
+
+
+                <!-- FOTOGRAFIAS -->
+                <div class="control-group">
+
+                    <label>01. Fotografias</label>
+
+                    <p class="control-description">
+                        Escolha as imagens que deseja colocar no card.
+                    </p>
+
+                    <label for="photoUpload" class="upload-button">
+                        ✧ Escolher fotografias
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photoUpload"
+                        accept="image/*"
+                        multiple
+                        hidden
+                    >
+
+                    <div id="photoCount" class="photo-count">
+                        Nenhuma fotografia selecionada.
+                    </div>
+
+                </div>
+
+
+                <div class="control-divider"></div>
+
+
+                <!-- APELIDO -->
+                <div class="control-group">
+
+                    <label>02. Seu apelido</label>
+
+                    <p class="control-description">
+                        Adicione uma assinatura pessoal ao seu card.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="nicknameInput"
+                        placeholder="Digite seu apelido..."
+                        maxlength="25"
+                    >
+
+                    <label class="checkbox-control">
+                        <input type="checkbox" id="showNickname">
+                        Exibir apelido no card
+                    </label>
+
+                    <select id="nicknameFont">
+                        <option value="Caveat">Caveat</option>
+                        <option value="DM Sans">DM Sans</option>
+                        <option value="Playfair Display">Playfair Display</option>
+                    </select>
+
+                </div>
+
+
+                <div class="control-divider"></div>
+
+
+                <!-- COR DO FUNDO -->
+                <div class="control-group">
+
+                    <label>03. Cor do universo</label>
+
+                    <p class="control-description">
+                        Escolha a cor de fundo do seu card.
+                    </p>
+
+                    <div class="color-picker-container">
+
+                        <input
+                            type="color"
+                            id="backgroundColor"
+                            value="#173c70"
+                        >
+
+                        <span id="colorValue">#173C70</span>
+
+                    </div>
+
+                    <div class="preset-colors">
+
+                        <button class="color-option" data-color="#173c70" style="background:#173c70"></button>
+                        <button class="color-option" data-color="#10172e" style="background:#10172e"></button>
+                        <button class="color-option" data-color="#789bc7" style="background:#789bc7"></button>
+                        <button class="color-option" data-color="#b5c9e8" style="background:#b5c9e8"></button>
+                        <button class="color-option" data-color="#756aab" style="background:#756aab"></button>
+                        <button class="color-option" data-color="#c6a9d9" style="background:#c6a9d9"></button>
+                        <button class="color-option" data-color="#d5a6b9" style="background:#d5a6b9"></button>
+                        <button class="color-option" data-color="#e7d5b7" style="background:#e7d5b7"></button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="control-divider"></div>
+
+
+                <!-- FILTROS -->
+                <div class="control-group">
+
+                    <label>04. Filtros fotográficos</label>
+
+                    <select id="photoFilter">
+
+                        <option value="none">Original</option>
+                        <option value="blue">Azul celestial</option>
+                        <option value="purple">Lavanda</option>
+                        <option value="pink">Rosa</option>
+                        <option value="yellow">Dourado</option>
+                        <option value="green">Verde</option>
+                        <option value="red">Vermelho</option>
+                        <option value="grayscale">Preto e branco</option>
+                        <option value="vintage">Vintage</option>
+
+                    </select>
+
+                </div>
+
+                <div class="control-divider"></div>
+
+                <!-- MOLDURAS -->
+                <div class="control-group">
+
+                    <label>05. Molduras</label>
+
+                    <p class="control-description">
+                        Escolha o formato das bordas das fotografias.
+                    </p>
+
+                    <select id="frameStyle">
+
+                        <option value="stamp">Selo postal</option>
+                        <option value="classic">Moldura clássica</option>
+                        <option value="rounded">Arredondada</option>
+                        <option value="square">Quadrada</option>
+                        <option value="polaroid">Polaroid</option>
+                        <option value="celestial">Celestial</option>
+
+                    </select>
+
+                </div>
+                <div class="control-divider"></div>
+
+                <!-- DECORAÇÕES -->
+                <div class="control-group">
+
+                    <label>06. Decorações PNG</label>
+
+                    <p class="control-description">
+                        Adicione pequenos elementos ao seu universo.
+                    </p>
+
+                    <div class="decoration-options">
+
+                        <button class="decoration-option" data-decoration="star">✦</button>
+                        <button class="decoration-option" data-decoration="sparkle">✧</button>
+                        <button class="decoration-option" data-decoration="moon">☾</button>
+                        <button class="decoration-option" data-decoration="planet">♄</button>
+                        <button class="decoration-option" data-decoration="dot">⋆</button>
+
+                    </div>
+                    <label for="pngUpload" class="upload-button secondary-upload">
+                        + Enviar minha própria decoração PNG
+                    </label>
+                    <input type="file" id="pngUpload" accept="image/png,image/webp,image/*" hidden>
+
+                    <label for="decorationCorner" class="sub-label">
+                        Posição da decoração
+                    </label>
+                    <select id="decorationCorner">
+
+                        <option value="top-left">Canto superior esquerdo</option>
+                        <option value="top-right">Canto superior direito</option>
+                        <option value="bottom-left">Canto inferior esquerdo</option>
+                        <option value="bottom-right">Canto inferior direito</option>
+
+                    </select>
+
+                    <div id="decorationList" class="decoration-list">
+                        Nenhuma decoração adicionada.
+                    </div>
+
+                </div>
+                <div class="control-divider"></div>
+                <!-- BRILHOS -->
+                <div class="control-group">
+
+                    <label>07. Brilhos e estrelas</label>
+
+                    <label class="checkbox-control">
+                        <input type="checkbox" id="showStars" checked>
+                        Exibir estrelas decorativas
+                    </label>
+
+                    <label class="checkbox-control">
+                        <input type="checkbox" id="showGlow" checked>
+                        Adicionar brilhos
+                    </label>
+
+                </div>
+
+                <div class="control-divider"></div>
+                <div class="control-group action-group">
+
+                    <button id="resetCard" class="reset-button">
+                        ↻ Restaurar card
+                    </button>
+
+                    <button id="downloadCard" class="download-button">
+                        ✦ Salvar meu card em PNG
+                    </button>
+
+                    <p class="save-caption">
+                        Seu pequeno universo, pronto para guardar.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-stars">✦ ⋆ ✧ ⋆ ✦</div>
+        <p>Astre Polaris</p>
+        <span>Um universo de ideias.</span>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
