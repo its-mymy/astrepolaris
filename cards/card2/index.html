@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Card 02 | Astre Polaris</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="topbar">
+    <a href="../../index.html" class="back-button">
+      ← Voltar para Astre Polaris
+    </a>
+
+    <span class="top-logo">✦ ASTRE POLARIS</span>
+  </header>
+
+  <main class="page">
+
+    <!-- INTRODUÇÃO -->
+    <section class="intro">
+      <p class="eyebrow">ASTRE POLARIS · CARD COLLECTION</p>
+      <h1>Card 02</h1>
+      <p>
+        Crie sua própria carta e deixe um pouco da sua identidade no universo.
+      </p>
+    </section>
+
+    <section class="workspace">
+
+      <!-- PRÉ-VISUALIZAÇÃO -->
+      <div class="preview-area">
+
+        <div class="profile-card card-frame-classic" id="profileCard">
+
+          <div class="card-stars">
+            ✦　·　✧　·　✦
+          </div>
+
+          <!-- FOTO -->
+          <div class="card-photo-area" id="photoArea">
+
+            <img
+              id="profilePhoto"
+              alt="Foto do perfil"
+            >
+
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <span>✧</span>
+              <p>Sua foto aqui</p>
+            </div>
+
+            <!-- ÚNICA MOLDURA DA FOTO -->
+            <div class="photo-frame frame-classic" id="photoFrame"></div>
+
+          </div>
+
+          <!-- APELIDO E LOGO -->
+          <div class="card-heading">
+
+            <div class="nickname" id="cardNickname">
+              Seu apelido
+            </div>
+
+            <div class="card-logo">
+              ✦ astre polaris
+            </div>
+
+          </div>
+
+          <div class="card-divider"></div>
+
+          <!-- INFORMAÇÕES -->
+          <div class="info-grid">
+
+            <div class="info-item">
+              <span>FAVORITE COLOR</span>
+              <strong id="cardColor">Sua cor favorita</strong>
+            </div>
+
+            <div class="info-item">
+              <span>MBTI</span>
+              <strong id="cardMbti">XXXX</strong>
+            </div>
+
+            <div class="info-item">
+              <span>SUBTYPE</span>
+              <strong id="cardSubtype">Seu subtipo</strong>
+            </div>
+
+            <div class="info-item">
+              <span>TEMPERAMENT</span>
+              <strong id="cardTemperament">Seu temperamento</strong>
+            </div>
+
+          </div>
+
+          <!-- FRASE -->
+          <div class="quote-area">
+
+            <span class="quote-symbol">“</span>
+
+            <p id="cardPhrase">
+              Sua frase aparecerá aqui...
+            </p>
+
+            <span class="quote-symbol closing">”</span>
+
+          </div>
+
+          <!-- RODAPÉ -->
+          <div class="card-footer">
+
+            <span>✧ A LITTLE PIECE OF THE UNIVERSE ✧</span>
+            <span>02</span>
+
+          </div>
+
+        </div>
+
+        <p class="preview-caption">
+          PRÉ-VISUALIZAÇÃO DO SEU CARD
+        </p>
+
+      </div>
+
+      <!-- EDITOR -->
+      <aside class="editor">
+
+        <!-- 01 FOTO -->
+        <section class="editor-section">
+
+          <h2>01. Sua foto</h2>
+
+          <label class="upload-button">
+            <span>＋ Escolher foto</span>
+
+            <input
+              type="file"
+              id="photoInput"
+              accept="image/*"
+            >
+          </label>
+
+          <p class="hint">
+            A foto ficará na parte superior do card.
+          </p>
+
+        </section>
+
+        <!-- 02 MOLDURA DA FOTO -->
+        <section class="editor-section">
+
+          <h2>02. Moldura da foto</h2>
+
+          <select id="photoFrameSelect">
+            <option value="frame-classic">Clássica</option>
+            <option value="frame-rounded">Arredondada</option>
+            <option value="frame-double">Dupla</option>
+            <option value="frame-glow">Brilho celestial</option>
+            <option value="frame-dashed">Pontilhada</option>
+          </select>
+
+        </section>
+
+        <!-- 03 MOLDURA DO CARD -->
+        <section class="editor-section">
+
+          <h2>03. Moldura do card</h2>
+
+          <select id="cardFrameSelect">
+            <option value="card-frame-classic">Clássica azul</option>
+            <option value="card-frame-gold">Dourada celestial</option>
+            <option value="card-frame-double">Dupla</option>
+            <option value="card-frame-stars">Estrelas</option>
+            <option value="card-frame-soft">Suave</option>
+          </select>
+
+        </section>
+
+        <!-- 04 INFORMAÇÕES PESSOAIS -->
+        <section class="editor-section">
+
+          <h2>04. Informações pessoais</h2>
+
+          <label class="field-label" for="nicknameInput">Apelido</label>
+
+          <input
+            type="text"
+            id="nicknameInput"
+            placeholder="Como quer ser chamado?"
+          >
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="showNickname"
+              checked
+            >
+            Mostrar apelido no card
+          </label>
+
+          <label class="field-label" for="favoriteColorInput">Cor favorita</label>
+
+          <input
+            type="text"
+            id="favoriteColorInput"
+            placeholder="Ex: Azul"
+          >
+
+          <label class="field-label" for="mbtiInput">MBTI</label>
+
+          <select id="mbtiInput">
+            <option value="">Selecione</option>
+            <option>INTJ</option>
+            <option>INTP</option>
+            <option>ENTJ</option>
+            <option>ENTP</option>
+            <option>INFJ</option>
+            <option>INFP</option>
+            <option>ENFJ</option>
+            <option>ENFP</option>
+            <option>ISTJ</option>
+            <option>ISFJ</option>
+            <option>ESTJ</option>
+            <option>ESFJ</option>
+            <option>ISTP</option>
+            <option>ISFP</option>
+            <option>ESTP</option>
+            <option>ESFP</option>
+          </select>
+
+          <!-- SUBTIPO E TEMPERAMENTO -->
+          <div class="field-row">
+
+            <div class="field-column">
+              <label class="field-label" for="subtypeInput">Subtipo</label>
+
+              <input
+                type="text"
+                id="subtypeInput"
+                placeholder="Ex: SP7, SO2..."
+              >
+            </div>
+
+            <div class="field-column">
+              <label class="field-label" for="temperamentInput">Temperamento</label>
+
+              <input
+                type="text"
+                id="temperamentInput"
+                placeholder="Ex: Sanguíneo"
+              >
+            </div>
+
+          </div>
+
+          <!-- FRASE -->
+          <label class="field-label" for="phraseInput">Sua frase</label>
+
+          <textarea
+            id="phraseInput"
+            rows="3"
+            maxlength="110"
+            placeholder="Escreva uma frase que represente você..."
+          ></textarea>
+
+        </section>
+
+        <!-- 05 TIPOGRAFIA -->
+        <section class="editor-section">
+
+          <h2>05. Tipografia</h2>
+
+          <select id="fontSelect">
+            <option value="'DM Sans', sans-serif">DM Sans</option>
+            <option value="'Caveat', cursive">Caveat</option>
+            <option value="'Playfair Display', serif">Playfair Display</option>
+          </select>
+
+        </section>
+
+        <!-- 06 CORES -->
+        <section class="editor-section">
+
+          <h2>06. Cores</h2>
+
+          <label class="field-label" for="backgroundColor">Cor do fundo</label>
+
+          <div class="color-control">
+            <input
+              type="color"
+              id="backgroundColor"
+              value="#c6e5f5"
+            >
+            <span>Escolha o fundo do card</span>
+          </div>
+
+          <label class="field-label" for="cardFrameColor">
+            Cor da moldura do card
+          </label>
+
+          <div class="color-control">
+            <input
+              type="color"
+              id="cardFrameColor"
+              value="#5579c9"
+            >
+            <span>Escolha a borda externa</span>
+          </div>
+
+          <label class="field-label" for="photoFrameColor">
+            Cor da moldura da foto
+          </label>
+
+          <div class="color-control">
+            <input
+              type="color"
+              id="photoFrameColor"
+              value="#3554a7"
+            >
+            <span>Escolha a borda da fotografia</span>
+          </div>
+
+          <label class="field-label" for="textColor">
+            Cor de todos os textos
+          </label>
+
+          <div class="color-control">
+            <input
+              type="color"
+              id="textColor"
+              value="#172d75"
+            >
+            <span>Todos os textos mudam juntos</span>
+          </div>
+
+          <!-- FILTRO -->
+          <label class="field-label" for="photoFilter">Filtro da foto</label>
+
+          <select id="photoFilter">
+            <option value="none">Original</option>
+            <option value="brightness(1.12) saturate(1.2)">Iluminado</option>
+            <option value="hue-rotate(35deg) saturate(1.2)">Azulado</option>
+            <option value="hue-rotate(75deg) saturate(1.2)">Lilás</option>
+            <option value="hue-rotate(150deg) saturate(1.3)">Rosado</option>
+            <option value="grayscale(1)">Preto e branco</option>
+            <option value="sepia(.55)">Vintage</option>
+          </select>
+
+        </section>
+
+        <!-- 07 DETALHES -->
+        <section class="editor-section">
+
+          <h2>07. Detalhes</h2>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="showStars"
+              checked
+            >
+            Mostrar estrelas
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="showLogo"
+              checked
+            >
+            Mostrar logo Astre Polaris
+          </label>
+
+        </section>
+
+        <!-- BOTÕES -->
+        <div class="editor-actions">
+
+          <button
+            type="button"
+            id="downloadButton"
+            class="primary-button"
+          >
+            ↓ Baixar meu Card 02
+          </button>
+
+          <button
+            type="button"
+            id="resetButton"
+            class="secondary-button"
+          >
+            Restaurar card
+          </button>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
