@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160b29">
+  <meta name="description" content="Conheça o Astre Polaris, bot interativo para grupos e comunidades do WhatsApp.">
+
+  <title>Astre Polaris — Seu grupo, mais vivo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <div class="stars stars-one" aria-hidden="true"></div>
+  <div class="stars stars-two" aria-hidden="true"></div>
+  <div class="nebula nebula-one" aria-hidden="true"></div>
+  <div class="nebula nebula-two" aria-hidden="true"></div>
+  <header class="site-header">
+
+    <a class="brand" href="#inicio" aria-label="Astre Polaris, início">
+      <span class="brand-mark">✦</span>
+      <span>ASTRE <b>POLARIS</b></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#recursos">Funcionalidades</a>
+      <a href="#planos">Planos</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="nav-cta" href="#contato">Contratar</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          <span class="status-dot"></span>
+          SEU COMPANHEIRO DE GRUPO NO WHATSAPP
+        </span>
+
+        <h1>
+          Seu grupo merece<br>
+          <em>um universo</em> de diversão.
+        </h1>
+
+        <p class="hero-description">
+          Conheça o Astre Polaris: um bot interativo que traz brincadeiras,
+          amizade, rankings e ferramentas de administração para sua comunidade.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#planos">
+            Conhecer os planos <span>↗</span>
+          </a>
+
+          <a class="button button-ghost" href="#recursos">
+            Explorar comandos
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span>✦</span>
+          Teste gratuito de 1 hora disponível.
+        </div>
+
+      </div>
+
+      <!-- MASCOTE SP7 -->
+      <div class="hero-mascot-area">
+
+        <div class="orbit orbit-large"></div>
+        <div class="orbit orbit-small"></div>
+
+        <span class="floating-star star-a">✦</span>
+        <span class="floating-star star-b">✧</span>
+        <span class="floating-star star-c">·</span>
+
+        <div class="speech-card">
+          <span class="speech-label">ASTRE ONLINE*</span>
+          <strong>Oiii! Eu sou o Astre!</strong>
+          <p>Vim deixar seu grupo muito mais divertido. Bora? ✨</p>
+        </div>
+
+        <div class="sp7-robot" role="img" aria-label="Mascote robô inspirado no subtipo SP7">
+
+          <div class="robot-antenna"><i></i></div>
+
+          <div class="robot-ear ear-left"></div>
+          <div class="robot-ear ear-right"></div>
+
+          <div class="robot-head">
+
+            <div class="robot-shine"></div>
+
+            <div class="robot-face">
+              <span class="robot-eye"></span>
+              <span class="robot-eye"></span>
+
+              <span class="robot-cheek cheek-left"></span>
+              <span class="robot-cheek cheek-right"></span>
+
+              <span class="robot-mouth"></span>
+            </div>
+
+            <div class="robot-head-label">SP⁷</div>
+
+          </div>
+
+          <div class="robot-neck"></div>
+
+          <div class="robot-body">
+            <span class="body-star">✦</span>
+            <span class="body-name">ASTRE</span>
+            <span class="body-light"></span>
+          </div>
+
+          <div class="robot-arm arm-left"></div>
+          <div class="robot-arm arm-right"></div>
+
+          <div class="robot-leg leg-left"></div>
+          <div class="robot-leg leg-right"></div>
+
+          <div class="robot-foot foot-left"></div>
+          <div class="robot-foot foot-right"></div>
+
+        </div>
+
+        <div class="mascot-caption">
+          um SP7 em forma de robô. energia? temos de sobra.
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INFORMAÇÕES RÁPIDAS -->
+    <section class="availability-strip section-wrap">
+
+      <div>
+        <span class="strip-icon">☾</span>
+        <span>
+          <b>Horário de funcionamento</b>
+          <small>Atualmente, das 08h às 00h</small>
+        </span>
+      </div>
+
+      <div>
+        <span class="strip-icon">⌂</span>
+        <span>
+          <b>Até 3 grupos</b>
+          <small>Inclusos no pacote inicial</small>
+        </span>
+      </div>
+
+      <div>
+        <span class="strip-icon">✧</span>
+        <span>
+          <b>Teste gratuito</b>
+          <small>Experimente por 1 hora</small>
+        </span>
+      </div>
+
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="content-section section-wrap" id="recursos">
+
+      <div class="section-heading">
+
+        <span class="eyebrow">✦ O QUE O ASTRE FAZ</span>
+
+        <h2>
+          Pequenos comandos,<br>
+          <em>grandes interações.</em>
+        </h2>
+
+        <p>
+          Seu grupo ganha atividades para aproximar os membros
+          e ferramentas para manter tudo organizado.
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <span class="feature-icon">♡</span>
+          <h3>Amizade & relações</h3>
+          <p>Descubra conexões, compatibilidades e brincadeiras entre os participantes.</p>
+
+          <div class="command-list">
+            <code>!amizade @fulano</code>
+            <code>!ship @fulano</code>
+            <code>!trisal</code>
+            <code>!abraco</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">✧</span>
+          <h3>Jogos & diversão</h3>
+          <p>Desafios, resultados inesperados e um pouco de caos saudável no grupo.</p>
+
+          <div class="command-list">
+            <code>!soco @fulano</code>
+            <code>!jokenpo @fulano</code>
+            <code>!personagem</code>
+            <code>!herói</code>
+            <code>!país</code>
+            <code>!tarot</code>
+            <code>!r</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">♛</span>
+          <h3>Ranking de atividade</h3>
+          <p>Os membros mais ativos sobem no rank. O sistema conta com proteção anti-spam.</p>
+
+          <div class="command-list">
+            <span class="feature-tag">Rank automático</span>
+            <span class="feature-tag">Anti-spam</span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">☄</span>
+          <h3>Boas-vindas</h3>
+          <p>O Astre recepciona automaticamente quem chega para fazer parte da comunidade.</p>
+
+          <div class="command-list">
+            <span class="feature-tag">Recepção de novos membros</span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">⌁</span>
+          <h3>Moderação</h3>
+          <p>Ferramentas para ajudar a equipe a manter o grupo organizado.</p>
+
+          <div class="command-list">
+            <code>!mutar</code>
+            <code>!adv</code>
+            <span class="feature-tag">5 advertências = banimento automático</span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">☾</span>
+          <h3>Controle do chat</h3>
+          <p>Programe horários para fechar e reabrir o chat ou controle manualmente.</p>
+
+          <div class="command-list">
+            <code>!fechar</code>
+            <code>!abrir</code>
+            <span class="feature-tag">Comandos para administradores</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="section-footnote">
+        *Os comandos administrativos são restritos a administradores.
+        A disponibilidade de cada recurso depende da configuração do grupo.
+      </p>
+
+    </section>
+
+    <!-- PLANOS -->
+    <section class="plans-section" id="planos">
+
+      <div class="section-wrap">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">✦ ESCOLHA SEU PLANO</span>
+
+          <h2>
+            Um lugar para o Astre<br>
+            <em>no seu grupo.</em>
+          </h2>
+
+          <p>
+            O pacote inicial inclui até 3 grupos.
+            Grupos adicionais têm cobrança extra.
+          </p>
+
+        </div>
+
+        <div class="plans-grid">
+
+          <article class="plan-card">
+
+            <span class="plan-kicker">VOCÊ JÁ TEM UM NÚMERO?</span>
+
+            <h3>Seu próprio número</h3>
+
+            <div class="price">
+              <strong>R$ 40</strong>
+              <span>/ mês</span>
+            </div>
+
+            <p>
+              O bot utiliza um número de WhatsApp seu.
+              A recarga e a manutenção da linha ficam por sua responsabilidade.
+            </p>
+
+            <ul>
+              <li>Até 3 grupos inclusos</li>
+              <li>Recursos do Astre Polaris</li>
+              <li>Você fornece e mantém o número</li>
+            </ul>
+
+            <a
+              class="button button-outline contact-plan"
+              href="#contato"
+              data-plan="Plano com número próprio — R$ 40/mês"
+            >
+              Tenho meu número
+            </a>
+
+          </article>
+
+          <article class="plan-card plan-featured">
+
+            <span class="plan-badge">SEM NÚMERO PRÓPRIO</span>
+
+            <span class="plan-kicker">NÓS DISPONIBILIZAMOS</span>
+
+            <h3>Número fornecido</h3>
+
+            <div class="price">
+              <strong>R$ 50</strong>
+              <span>/ mês</span>
+            </div>
+
+            <p>
+              O bot utiliza o número disponibilizado
+              pela responsável pelo Astre Polaris.
+            </p>
+
+            <ul>
+              <li>Até 3 grupos inclusos</li>
+              <li>Recursos do Astre Polaris</li>
+              <li>Não precisa ter uma linha própria para o bot</li>
+            </ul>
+
+            <a
+              class="button button-primary contact-plan"
+              href="#contato"
+              data-plan="Plano com número fornecido — R$ 50/mês"
+            >
+              Quero esse plano <span>↗</span>
+            </a>
+
+          </article>
+
+        </div>
+
+        <p class="plans-note">
+          Precisa de mais de 3 grupos?
+          Consulte o valor adicional antes da contratação.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- TESTE GRATUITO -->
+    <section class="trial-section section-wrap">
+
+      <div class="trial-art">
+        ✦<span>1h</span>✧
+      </div>
+
+      <div class="trial-copy">
+
+        <span class="eyebrow">✦ CONHEÇA ANTES DE CONTRATAR</span>
+
+        <h2>
+          Experimente o Astre<br>
+          <em>por uma hora.</em>
+        </h2>
+
+        <p>
+          Peça um teste gratuito: o Astre Polaris fica no seu grupo
+          durante 1 hora para que você e os membros possam experimentar
+          os comandos e conhecer as funcionalidades.
+        </p>
+
+        <a class="button button-primary" href="#contato">
+          Solicitar teste gratuito <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- DÚVIDAS FREQUENTES -->
+    <section class="faq-section section-wrap" id="duvidas">
+
+      <div class="section-heading">
+
+        <span class="eyebrow">✦ ANTES DE CHAMAR</span>
+
+        <h2>
+          Dúvidas <em>frequentes.</em>
+        </h2>
+
+      </div>
+
+      <div class="faq-list">
+
+        <details>
+          <summary>O Astre funciona 24 horas?</summary>
+          <p>
+            Atualmente, o horário de funcionamento é das 08h à meia-noite.
+            O serviço ainda não fica disponível 24 horas por dia.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quantos grupos estão inclusos?</summary>
+          <p>
+            O pacote inicial inclui até 3 grupos.
+            Para adicionar mais grupos, consulte a cobrança adicional.
+          </p>
+        </details>
+
+        <details>
+          <summary>Qual é a diferença entre os planos?</summary>
+          <p>
+            No plano de R$ 40 por mês, você utiliza seu próprio número
+            e fica responsável pela recarga. No plano de R$ 50 por mês,
+            o bot utiliza o número disponibilizado pela responsável
+            pelo Astre Polaris.
+          </p>
+        </details>
+
+        <details>
+          <summary>Posso testar antes de pagar?</summary>
+          <p>
+            Sim! Você pode solicitar um teste gratuito de 1 hora
+            para conhecer o funcionamento do bot no seu grupo.
+          </p>
+        </details>
+
+        <details>
+          <summary>O bot pode receber novos comandos?</summary>
+          <p>
+            O Astre Polaris pode receber atualizações, correções,
+            melhorias e novos recursos. Consulte a responsável
+            sobre personalizações e novidades.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quem pode usar os comandos de administração?</summary>
+          <p>
+            Os comandos de fechar e abrir o chat, além das ferramentas
+            administrativas, são destinados aos administradores do grupo.
+          </p>
+        </details>
+
+      </div>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact-section section-wrap" id="contato">
+
+      <div class="contact-panel">
+
+        <span class="eyebrow">✦ VAMOS CONVERSAR?</span>
+
+        <h2>
+          Seu grupo está pronto<br>
+          para conhecer o <em>Astre?</em>
+        </h2>
+
+        <p>
+          Fale diretamente com a responsável pelo Astre Polaris
+          para contratar, solicitar seu teste gratuito ou tirar dúvidas.
+        </p>
+
+        <a
+          class="button button-primary"
+          id="ownerContact"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          Falar com a dona no WhatsApp <span>↗</span>
+        </a>
+
+        <small>
+          O link de contato precisa ser configurado pela responsável pelo site.
+        </small>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="site-footer">
+
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">✦</span>
+      <span>ASTRE <b>POLARIS</b></span>
+    </a>
+
+    <p>Feito para comunidades que brilham juntas.</p>
+
+    <span>© <span id="year"></span> Astre Polaris</span>
+
+  </footer>
+  <button
+    class="chat-launcher"
+    id="chatLauncher"
+    aria-label="Conversar com Astre"
+    aria-expanded="false"
+  >
+    <span class="launcher-spark">✦</span>
+    <span class="launcher-face">◡</span>
+    <span class="launcher-text">Fale com o Astre</span>
+  </button>
+
+  <!-- JANELA DO CHAT -->
+  <section
+    class="chat-widget"
+    id="chatWidget"
+    aria-label="Conversa com Astre"
+    aria-hidden="true"
+  >
+
+    <div class="chat-header">
+
+      <div class="chat-avatar">✦</div>
+
+      <div>
+        <strong>Astre Polaris</strong>
+        <small>
+          <span class="status-dot"></span>
+          Assistente virtual
+        </small>
+      </div>
+
+      <button id="chatClose" aria-label="Fechar conversa">
+        ×
+      </button>
+
+    </div>
+
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
+
+      <div class="chat-bubble bot-message">
+        Oiii! ✨ Eu sou o Astre, o robozinho SP7 do Astre Polaris!
+        Quer saber sobre os comandos, os planos ou pedir um teste?
+      </div>
+
+      <div class="quick-questions">
+
+        <button data-question="Quais são os planos e preços?">
+          💰 Planos e preços
+        </button>
+
+        <button data-question="Quais comandos o bot tem?">
+          🤖 Ver comandos
+        </button>
+
+        <button data-question="Como funciona o teste gratuito?">
+          🧪 Teste gratuito
+        </button>
+
+        <button data-question="Qual é o horário de funcionamento?">
+          🕒 Horários
+        </button>
+
+        <button data-question="Quero falar com a dona.">
+          💬 Falar com a dona
+        </button>
+
+      </div>
+
+    </div>
+
+    <form class="chat-input-area" id="chatForm">
+
+      <input
+        id="chatInput"
+        type="text"
+        placeholder="Pergunte algo ao Astre..."
+        autocomplete="off"
+        aria-label="Digite sua pergunta"
+      >
+
+      <button type="submit" aria-label="Enviar mensagem">
+        ➤
+      </button>
+
+    </form>
+
+    <div class="chat-disclaimer">
+      Astre é um assistente automático.
+      Para contratar, fale com a responsável.
+    </div>
+
+  </section>
+
+</body>
+</html>
