@@ -1,62 +1,37 @@
-
-// ==========================================
-// ASTRE POLARIS — CONFIGURAÇÕES
-// ==========================================
-
-// Coloque seu número com DDI + DDD + número.
-// Exemplo: 5511999999999
-const OWNER_WHATSAPP = "55SEUNUMERO";
-
+const OWNER_WHATSAPP = "5592988467507";
 const WHATSAPP_MESSAGE =
   "Olá! Conheci o Astre Polaris pelo site e gostaria de saber mais.";
-
 const ownerLink = `https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-
 const hasOwnerNumber = /^\d{12,13}$/.test(OWNER_WHATSAPP);
-
-// ==========================================
-// CONTATO PRINCIPAL
-// ==========================================
-
-const ownerContact = document.getElementById("ownerContact");
-
-if (ownerContact) {
-  ownerContact.href = hasOwnerNumber ? ownerLink : "#";
-
-  ownerContact.addEventListener("click", (event) => {
-    if (!hasOwnerNumber) {
-      event.preventDefault();
-      alert("Configure seu número no arquivo script.js, na variável OWNER_WHATSAPP.");
-    }
-  });
+function createWhatsAppLink(message) {
+  return `https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
-// ==========================================
-// CONTATO DOS PLANOS
-// ==========================================
+const ownerContact = document.getElementById("ownerContact");
+if (ownerContact) {
+  ownerContact.href = ownerLink;
+  ownerContact.target = "_blank";
+  ownerContact.rel = "noopener noreferrer";
+}
 
 document.querySelectorAll(".contact-plan").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
 
-    if (!hasOwnerNumber) {
-      alert("Configure seu número no arquivo script.js, na variável OWNER_WHATSAPP.");
-      return;
-    }
+    if (!hasOwnerNumber) return;
 
-    const plan = link.dataset.plan || "Quero conhecer o Astre Polaris";
+    const plan = link.dataset.plan || "Astre Polaris";
 
-    const message = `Olá! Tenho interesse no ${plan}. Podemos conversar?`;
+    const message =
+      `Olá! Tenho interesse no ${plan}. Conheci o bot pelo site do Astre Polaris e gostaria de mais informações.`;
 
-    const url = `https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(
+      createWhatsAppLink(message),
+      "_blank",
+      "noopener,noreferrer"
+    );
   });
 });
-
-// ==========================================
-// MENU MOBILE
-// ==========================================
 
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
@@ -78,10 +53,6 @@ if (menuToggle && mainNav) {
   });
 }
 
-// ==========================================
-// CHAT DO ASTRE
-// ==========================================
-
 const chatLauncher = document.getElementById("chatLauncher");
 const chatWidget = document.getElementById("chatWidget");
 const chatClose = document.getElementById("chatClose");
@@ -99,7 +70,7 @@ function toggleChat(open) {
   if (open && chatInput) chatInput.focus();
 }
 
-if (chatLauncher) {
+if (chatLauncher && chatWidget) {
   chatLauncher.addEventListener("click", () => {
     toggleChat(!chatWidget.classList.contains("open"));
   });
@@ -109,13 +80,9 @@ if (chatClose) {
   chatClose.addEventListener("click", () => toggleChat(false));
 }
 
-// ==========================================
-// ADICIONAR MENSAGENS
-// ==========================================
-
 function addMessage(text, type) {
+  if (!chatMessages) return;
   const message = document.createElement("div");
-
   message.className =
     `chat-bubble ${type === "user" ? "user-message" : "bot-message"}`;
 
@@ -124,12 +91,9 @@ function addMessage(text, type) {
   chatMessages.appendChild(message);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
-
-// ==========================================
-// MENSAGEM COM LINK DO WHATSAPP
-// ==========================================
-
 function addContactMessage() {
+  if (!chatMessages) return;
+
   const message = document.createElement("div");
   message.className = "chat-bubble bot-message";
 
@@ -140,36 +104,20 @@ function addContactMessage() {
 
   message.appendChild(text);
 
-  if (hasOwnerNumber) {
-    const button = document.createElement("a");
+  const button = document.createElement("a");
 
-    button.href =
-      `https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(
-        "Olá! Vim pelo site do Astre Polaris e gostaria de conversar com a responsável."
-      )}`;
+  button.href = createWhatsAppLink(
+    "Olá! Vim pelo site do Astre Polaris e gostaria de conversar com a responsável."
+  );
 
-    button.target = "_blank";
-    button.rel = "noopener noreferrer";
-    button.className = "astre-contact-link";
-    button.textContent = "💬 Entre em contato com a dona";
-
-    message.appendChild(button);
-  } else {
-    const warning = document.createElement("p");
-
-    warning.textContent =
-      "O WhatsApp da responsável ainda precisa ser configurado no site.";
-
-    message.appendChild(warning);
-  }
-
+  button.target = "_blank";
+  button.rel = "noopener noreferrer";
+  button.className = "astre-contact-link";
+  button.textContent = "💬 Entre em contato com a dona";
+  message.appendChild(button);
   chatMessages.appendChild(message);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
-
-// ==========================================
-// IDENTIFICAR PEDIDOS DE CONTATO
-// ==========================================
 
 function wantsOwnerContact(question) {
   const q = question.toLocaleLowerCase("pt-BR");
@@ -191,11 +139,6 @@ function wantsOwnerContact(question) {
 
   return keywords.some((word) => q.includes(word));
 }
-
-// ==========================================
-// RESPOSTAS AUTOMÁTICAS
-// ==========================================
-
 function getAstreAnswer(question) {
   const q = question.toLocaleLowerCase("pt-BR");
 
@@ -270,10 +213,6 @@ function getAstreAnswer(question) {
   return null;
 }
 
-// ==========================================
-// PROCESSAR PERGUNTAS
-// ==========================================
-
 function handleQuestion(question) {
   const trimmed = question.trim();
 
@@ -296,11 +235,6 @@ function handleQuestion(question) {
     }
   }, 350);
 }
-
-// ==========================================
-// ENVIAR MENSAGEM
-// ==========================================
-
 if (chatForm && chatInput) {
   chatForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -310,19 +244,11 @@ if (chatForm && chatInput) {
   });
 }
 
-// ==========================================
-// PERGUNTAS RÁPIDAS
-// ==========================================
-
 document.querySelectorAll(".quick-questions button").forEach((button) => {
   button.addEventListener("click", () => {
-    handleQuestion(button.dataset.question);
+    handleQuestion(button.dataset.question || button.textContent);
   });
 });
-
-// ==========================================
-// ANO AUTOMÁTICO
-// ==========================================
 
 const year = document.getElementById("year");
 
@@ -330,12 +256,7 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-// ==========================================
-// ESTRELAS VOADORAS
-// ==========================================
-
 const starLayer = document.createElement("div");
-
 starLayer.className = "flying-stars";
 starLayer.setAttribute("aria-hidden", "true");
 
@@ -351,18 +272,13 @@ function createFlyingStars() {
 
   for (let i = 0; i < amount; i++) {
     const star = document.createElement("span");
-
     star.className = "flying-star";
-
     star.textContent =
       starSymbols[Math.floor(Math.random() * starSymbols.length)];
-
     star.style.left = `${Math.random() * 100}vw`;
     star.style.top = `${Math.random() * 100}vh`;
     star.style.fontSize = `${8 + Math.random() * 17}px`;
-    star.style.color =
-      starColors[Math.floor(Math.random() * starColors.length)];
-
+    star.style.color = starColors[Math.floor(Math.random() * starColors.length)];
     star.style.animationDuration = `${9 + Math.random() * 13}s`;
     star.style.animationDelay = `${-Math.random() * 20}s`;
 
@@ -371,9 +287,7 @@ function createFlyingStars() {
 }
 
 createFlyingStars();
-
 let starResizeTimeout;
-
 window.addEventListener("resize", () => {
   clearTimeout(starResizeTimeout);
 
